@@ -84,7 +84,7 @@ export const App: React.FC = () => {
       })
       .catch(() => {
         setTodos(todos);
-        setErrorMessage('Unablae to delete a todo');
+        setErrorMessage('Unable to delete a todo');
         setTimeout(() => setErrorMessage(''), 3000);
       })
       .finally(() => {
@@ -104,7 +104,7 @@ export const App: React.FC = () => {
       if (result.status === 'fulfilled') {
         successfulIds.push(completedTodos[index].id);
       } else {
-        setErrorMessage('Failed to delete some todo');
+        setErrorMessage('Unable to delete a todo');
         setTimeout(() => setErrorMessage(''), 3000);
       }
     });

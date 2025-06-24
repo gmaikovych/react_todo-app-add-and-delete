@@ -33,7 +33,7 @@ export const TodoItem: React.FC<Props> = ({
       className="todo__title"
       style={loadingTodoId === id ? { textDecoration: 'none' } : {}}
     >
-      {loadingTodoId === id ? 'Todo is being saved now' : title}
+      {id === 0 || loadingTodoId !== id ? title : 'Todo is being saved now'}
     </span>
     <button
       type="button"

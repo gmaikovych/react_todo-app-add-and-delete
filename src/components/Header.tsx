@@ -30,7 +30,7 @@ export const Header: React.FC<Props> = ({ todos, addTodo }) => {
     if (!isLoading) {
       inputRef.current?.focus();
     }
-  }, [isLoading]);
+  }, [isLoading, todos]);
 
   return (
     <header className="todoapp__header">
